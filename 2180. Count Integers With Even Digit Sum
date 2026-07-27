@@ -1,0 +1,20 @@
+class Solution {
+    public int countEven(int num) {
+        int count = 0;
+
+        for (int i = 1; i <= num; i++) {
+            int sumOfDigits = 0;
+            int temp = i;
+
+            while (temp > 0) {
+                sumOfDigits += temp % 10; 
+                temp /= 10;  
+            }
+            
+            if (sumOfDigits % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
